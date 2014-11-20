@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<fx:root xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+         minWidth="-Infinity" prefHeight="563.0" prefWidth="770.0" type="BorderPane" xmlns="http://javafx.com/javafx/8">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="pswdLabel" layoutX="54.0" layoutY="42.0" prefHeight="17.0" prefWidth="181.0"
+                       text="Password to encrypt"/>
+                <TextField fx:id="pswdTxField" layoutX="172.0" layoutY="38.0"/>
+                <Label fx:id="pswdHelp" layoutX="333.0" layoutY="42.0" text="?"/>
+                <Label fx:id="encryptLabel" layoutX="79.0" layoutY="89.0" text="Encryption type"/>
+                <ChoiceBox fx:id="encryptList" layoutX="171.0" layoutY="85.0" prefWidth="150.0"/>
+                <Label fx:id="encryptHelp" layoutX="333.0" layoutY="89.0" text="?"/>
+                <Label fx:id="resultLabel" layoutX="125.0" layoutY="163.0" prefHeight="17.0" prefWidth="40.0"
+                       text="Result:"/>
+                <Label fx:id="resultText" layoutX="171.0" layoutY="163.0" prefHeight="17.0" prefWidth="350.0"/>
+                <ProgressIndicator fx:id="resultLoad" layoutX="719.0" layoutY="492.0" progress="0.0"/>
+            </children>
+        </Pane>
+    </center>
+</fx:root>
