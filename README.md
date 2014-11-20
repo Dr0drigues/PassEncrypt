@@ -1,11 +1,11 @@
 Password Encryption
 ===================
 
-Language used: Java
-Frameworks used: JavaFX, JUnit
-App. version: 0.11.14
+`Language used:` _Java_  
+`Frameworks used:` _JavaFX_, _JUnit_  
+`App. version:` *0.11.14.4*  
 
-Application for password encryption.
-Exercise for learning JavaFX and use of JUnit.
+Application for password encryption.  
+Exercise for learning `JavaFX` and use of `JUnit`.
 
 
