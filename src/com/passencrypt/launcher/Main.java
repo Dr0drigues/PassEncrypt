@@ -14,8 +14,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Hello World");
+        String version = "0.11.14";
+        Parent root = FXMLLoader.load(getClass().getResource("../view/sample.fxml"));
+        primaryStage.setTitle("PassEncrypt v.:" + version);
         primaryStage.setScene(new Scene(root, 770.0, 563.0));
         primaryStage.show();
     }

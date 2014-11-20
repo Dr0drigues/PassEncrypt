@@ -149,16 +149,30 @@ public class CeasarEncrypt {
         String toReturn = "";
 
         for (Character c : toEncrypt.toCharArray()) {
+            int length;
+            int i;
+            int actual;
+            int index;
+
             if (getMinTable().contains(c)) {
-                int i = (getMinTable().indexOf(c) + decalage > getMinTable().size()) ? (getMinTable().size() - decalage) - 1 : getMinTable().indexOf(c) + decalage - 1;
+                index = getMinTable().indexOf(c);
+                length = getMinTable().size();
+                actual = index + decalage;
+                i = (actual > length) ? ((actual - length) - 1) : (actual - 1);
                 toReturn += getMinTable().get(i);
             } else if (getMajTable().contains(c)) {
-                int i = (getMajTable().indexOf(c) + decalage > getMajTable().size()) ? (getMajTable().size() - decalage) - 1 : getMajTable().indexOf(c) + decalage - 1;
+                index = getMajTable().indexOf(c);
+                actual = index + decalage;
+                length = getMajTable().size();
+                i = (actual > length) ? ((actual - length) - 1) : (actual - 1);
                 toReturn += getMajTable().get(i);
-            } else if (getMinTable().contains(c)) {
-                int i = (getNmbTable().indexOf(c) + decalage);
-                while (i > getNmbTable().size()) {
-                    i = (i > getNmbTable().size()) ? (getNmbTable().size() - decalage) - 1 : getNmbTable().indexOf(c) + decalage - 1;
+            } else if (getNmbTable().contains(c)) {
+                index = getNmbTable().indexOf(c);
+                actual = index + decalage - 1;
+                length = getNmbTable().size();
+                i = (actual >= 10) ? (actual - 9) : actual;
+                while (i > length) {
+                    i = (i > length) ? ((actual - length) - 1) : (actual - 1);
                 }
                 toReturn += getNmbTable().get(i);
             } else {
