@@ -1,39 +1,29 @@
 package com.passencrypt.types;
 
 import com.passencrypt.exception.CeasarEncryptException;
+import com.passencrypt.exception.EncryptException;
 
 import java.util.ArrayList;
 
 /**
  * Created by Dimitri RODRIGUES-OLIVEIRA on 19/11/2014.
  */
-public class CeasarEncrypt {
+public class CeasarEncrypt extends Encrypt {
 
-    private String passwd;
     private int decalage;
     private ArrayList<Character> minTable;
     private ArrayList<Character> majTable;
     private ArrayList<Character> nmbTable;
 
-    private String retour;
-
     public CeasarEncrypt(String passwd, int decalage) {
+        super(passwd);
         this.decalage = decalage;
-        this.passwd = passwd;
         initTables();
         try {
-            this.retour = getRetour();
-        } catch (CeasarEncryptException e) {
+            getRetour();
+        } catch (EncryptException e) {
             e.printStackTrace();
         }
-    }
-
-    public String getPasswd() {
-        return passwd;
-    }
-
-    public void setPasswd(String passwd) {
-        this.passwd = passwd;
     }
 
     public int getDecalage() {
@@ -66,10 +56,6 @@ public class CeasarEncrypt {
 
     public void setNmbTable(ArrayList<Character> nmbTable) {
         this.nmbTable = nmbTable;
-    }
-
-    public String getRetour() throws CeasarEncryptException {
-        return encrypt();
     }
 
     private void initTables() {
@@ -143,7 +129,7 @@ public class CeasarEncrypt {
         }};
     }
 
-    private String encrypt() throws CeasarEncryptException {
+    public String encrypt() throws CeasarEncryptException {
         String toEncrypt = getPasswd();
         int decalage = getDecalage() + 1;
         String toReturn = "";

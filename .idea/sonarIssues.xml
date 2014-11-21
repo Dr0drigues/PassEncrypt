@@ -33,6 +33,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/out/production/PassEncrypt/com/passencrypt/view/sample.fxml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/com/passencrypt/beans/CeasarEncrypt.java">
           <value>
             <set />
@@ -73,6 +78,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/com/passencrypt/exception/EncryptException.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/passencrypt/exception/HebraicEncryptException.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/com/passencrypt/launcher/EncryptTest.java">
           <value>
             <set />
@@ -108,7 +123,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/com/passencrypt/types/Encrypt.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/com/passencrypt/types/Encryption.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/passencrypt/types/HebraicEncrypt.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/passencrypt/types/RandomEncrypt.java">
           <value>
             <set />
           </value>

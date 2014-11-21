@@ -1,6 +1,6 @@
 package com.passencrypt.test;
 
-import com.passencrypt.exception.CeasarEncryptException;
+import com.passencrypt.exception.EncryptException;
 import com.passencrypt.types.CeasarEncrypt;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,7 +31,7 @@ public class CeasarEncryptTest {
 
         try {
             assertTrue("Hglyaf9".equals(ceasarEncryptOK.getRetour()));
-        } catch (CeasarEncryptException e) {
+        } catch (EncryptException e) {
             fail("Encryption failed");
         }
     }
